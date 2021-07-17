@@ -1,40 +1,173 @@
-main {
-    max-width: 1000px;
-    margin: auto;
-    box-shadow: 30px 0px 40px rgba(0,0,0,.1),
-    -30px 0px 40px rgba(0,0,0,.1)
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
 }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px ;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: #333;
+  }
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     background: #eee;
     height: auto;
 }
 
-h1 {
-    font-weight: 400;
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin: 0;
-}
-
 h2 {
-    font-weight: 400;
-    font-size: 2.5rem;
+    background: #333;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 400 bold;
+    font-size: 1.5rem;
     text-transform: capitalize;
-    margin: 0;
 }
 
 img {
     display: block;
     width: 100%;
-    padding: 50px;
-    margin: 0;
+    padding: 0;
+    margin: auto;
 }
 
 video {
     display: block;
     width: 100%;
-    padding: 50px;
+    padding: 0;
+    margin: auto;
+}
+
+#header {
+    padding-bottom: 1rem;
+}
+
+#play-pause {
+  width: 40px;
+  height: auto;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* Layout containers */
+
+.name {
+	  font-weight: 400;
+    font-size: 4rem;
+    text-transform: uppercase;
     margin: 0;
 }
+
+.main-nav {
+	margin-top: 5px;
+}
+.name a {
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #ffffff;
+	text-transform: uppercase;
+  width: 92%;
+  margin: 20px auto;
+}
+
+.main-nav a:hover {
+	color: #ccc44e;
+}
+
+.main-nav li {
+  width: 220px;
+  margin: 0 auto;
+}
+
+.container {
+    padding-top: .1rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-shadow: 30px 0px 40px rgba(0,0,0,.1),
+    -30px 0px 40px rgba(0,0,0,.1)
+}
+
+.main-header {
+    padding: 1em 0;
+    background: #d9e4ea;
+}
+
+.caption {
+    padding: 0;
+    text-align: center;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #d9e4ea;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.wrap {
+  padding-bottom: 195px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* Using mobile-first approach, the menu items by default are stacked on top of each other, and after 650px,
+the nav bar items flex to a row below JCPhoto text */
+
+@media (min-width: 650px) {
+   
+  .main-header, .main-nav {
+      display: flex;
+    }
+
+  .main-header {
+      flex-direction: column;
+      align-items: center;
+  }
+    
+  .container {
+        width: 70%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+  }
+
+/* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
+   using space-between command */
+  @media (min-width: 1025px) {
+    .main-header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
