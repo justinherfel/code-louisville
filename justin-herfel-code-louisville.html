@@ -12,7 +12,7 @@
 
 <body>
     <header class="main-header">
-        <h1 class="name"><a href="#">JPhoto</a></h1>
+        <h1 class="name"><a href="#">JUSTIN</a></h1>
         <nav>
             <ul class="main-nav">
                 <li><a href="#introduction">Introduction</a></li>
@@ -105,8 +105,8 @@
                         </video>
                         <div id="player-controls">
                             <input type="image" src="images/play.svg" id="play-pause">
-                            <input type="range" id="time" value="0">
-                            <input type="range" id="volume" min="0" max="1" step="0.2" value="1">
+                            <input type="range" id="time" value="0" id="play-slider">
+                            <input type="range" id="volume" min="0" max="1" step="0.1" value="1" id="volume-slider">
                             <button type="button" id="mute">Mute</button>
                             <button type="button" id="full-screen">Full Screen</button>
                         </div>
@@ -125,9 +125,10 @@
     </div>
     <footer class="main-footer">
         <h3>Get In Touch</h3>
-        <p>Email or call to connect</p>
-        <p>Email: <strong>justinherfel@yahoo.com</strong></p>
-        <p>Phone: <strong>(646) 234-3514</strong></p>
+        <div class="main-footer-container"></div>
+            <a href="mailto:justinherfel@yahoo.com">&#9993;</a>
+            <a href="tel: 646-234-3514">&#9742;</a>
+        </div>
     </footer>
     <script src="js/scripts.js"></script>
 </body>
