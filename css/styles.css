@@ -45,10 +45,16 @@ h2 {
 }
 
 img {
+    margin-top: 50px;
     display: block;
     width: 100%;
     padding: 0;
-    margin: auto;
+}
+
+img:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(.5rem .5rem .25rem darkgrey);
+  margin: auto;
 }
 
 video {
