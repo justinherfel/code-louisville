@@ -3,51 +3,52 @@
 ==================================== */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   }
 
 nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px ;
-    font-size: 1.25rem;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background: #333;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px ;
+  font-size: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: #333;
   }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: 0;
-    background: #eee;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  background: #eee;
+  height: auto;
 }
 
 h2 {
-    background: #333;
-    padding: 1.5rem 0;
-    text-align: center;
-    color: #fff;
-    font-weight: 400 bold;
-    font-size: 1.5rem;
-    text-transform: capitalize;
+  background: #333;
+  margin: 20px 0;
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 400 bold;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 img {
-    display: block;
-    width: 100%;
-    padding: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
 }
 
 img:hover {
@@ -57,14 +58,15 @@ img:hover {
 }
 
 video {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: auto;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: auto;
 }
 
 #header {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin: auto;
 }
 
 #play-pause {
@@ -73,6 +75,17 @@ video {
   height: auto;
 }
 
+#mute-unmute {
+  padding: 3px;
+  width: 44px;
+  height: auto;
+}
+
+#full-screen {
+  padding: 3px;
+  width: 35px;
+  height: auto;
+}
 
 /* ================================= 
   Base Layout Styles
@@ -81,10 +94,10 @@ video {
 /* Layout containers */
 
 .name {
-	  font-weight: 400;
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin: 0;
+	font-weight: 400;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .main-nav {
@@ -112,32 +125,32 @@ video {
 }
 
 .container {
-    padding-top: .1rem;
-    padding-left: 1em;
-    padding-right: 1em;
-    box-shadow: 30px 0px 40px rgba(0,0,0,.1),
-    -30px 0px 40px rgba(0,0,0,.1)
+  padding-top: .1rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: 30px 0px 40px rgba(0,0,0,.1),
+             -30px 0px 40px rgba(0,0,0,.1);
 }
 
 .main-header {
-    padding: 1em 0;
-    background: #d9e4ea;
+  padding: 1em 0;
+  background: #d9e4ea;
 }
 
 .caption {
-    padding: 0;
-    text-align: center;
+  padding: 0;
+  text-align: center;
 }
 
 .main-footer {
-    text-align: center;
-    padding: 1% 0;
-    background: #d9e4ea;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
-    height: 15vh;
+  text-align: center;
+  padding: 1% 0;
+  background: #d9e4ea;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  height: 15vh;
 }
 
 .main-footer-container {

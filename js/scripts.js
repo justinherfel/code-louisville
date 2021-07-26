@@ -5,7 +5,7 @@ window.onload = function() {
 
     // The buttons
     var playButton = document.getElementById("play-pause");
-    var muteButton = document.getElementById("mute");
+    var muteButton = document.getElementById("mute-unmute");
     var fullScreenButton = document.getElementById("full-screen");
 
     // The slider bars
@@ -17,22 +17,22 @@ window.onload = function() {
         if (video.paused == true) {
           video.play();
           playButton.innerHTML = "Pause";
-          playButton.setAttribute("src", "images/play.svg");
+          playButton.setAttribute("src", "video/pause.png");
         } else {
           video.pause();
           playButton.innerHTML = "Play";
-          playButton.setAttribute("src", "images/pause.svg");
+          playButton.setAttribute("src", "video/play.png");
         }
     });
     
-    // Event listener for the mute button
+    // Event listener for the mute-unmute button
     muteButton.addEventListener("click", function() {
         if (video.muted == false) {
             video.muted = true;
-            muteButton.innerHTML = "Unmute";
+            muteButton.setAttribute("src", "video/unmute.png");
         } else {
             video.muted = false;
-            muteButton.innerHTML = "Mute";
+            muteButton.setAttribute("src", "video/mute.png");
         };
     });
 
@@ -40,7 +40,11 @@ window.onload = function() {
     fullScreenButton.addEventListener("click", function() {
         if (video.requestFullscreen) {
             video.requestFullscreen();
-        }   
+            playButton.setAttribute("src", "video/fullscreen.png")
+        } else {
+            video.exitFullScreen();
+            playButton.setAttribute("src", "video/fullscreen.png")
+        }
         // Do I need to include moz and webkit?
     });
 
