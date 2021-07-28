@@ -203,4 +203,11 @@ the nav bar items flex to a row below JCPhoto text */
       justify-content: space-between;
     }
     
+    .container {
+      width: 90%;
+      max-width: 1500px;
+      margin: auto;
   }
+
+}
+
