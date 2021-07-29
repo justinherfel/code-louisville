@@ -71,19 +71,19 @@ video {
 
 #play-pause {
   padding: 3px;
-  width: 35px;
+  width: 30px;
   height: auto;
 }
 
 #mute-unmute {
   padding: 3px;
-  width: 44px;
+  width: 35px;
   height: auto;
 }
 
 #full-screen {
   padding: 3px;
-  width: 35px;
+  width: 30px;
   height: auto;
 }
 
