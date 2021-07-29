@@ -41,48 +41,32 @@ window.onload = function() {
         if (video.requestFullscreen) {
             video.requestFullscreen();
             playButton.setAttribute("src", "video/fullscreen.png")
-        } else {
-            video.exitFullScreen();
-            playButton.setAttribute("src", "video/fullscreen.png")
-        }
-        // Do I need to include moz and webkit?
+        } 
     });
 
     // Event listener for the timeslider bar
     timeSlider.addEventListener("change" , function() {
+        // New time calculation
         var time = video.duration * (timeSlider.value / 100);
+        // Vide time update
         video.currentTime = time;
     });
+
+    // Update the timeslider bar as the video plays
+    video.addEventListener("timeupdate", function() {
+        // Slider value calculation
+        var value = (100 / video.duration) * video.currentTime;
+        // Slider value update
+        timeSlider.value = value;
+    })
+
+    // Video pause when time slider handle is being moved
+    timeSlider.addEventListener("mousedown", function() {
+        video.pause();
+    })
 
     // Event listener for the volumeslider bar  
     volumeSlider.addEventListener("change" , function() {
         video.volume = volumeSlider.value;
     })
  }
-
- // https://blog.teamtreehouse.com/building-custom-controls-for-html5-videos
- // notes on how to set up a custom video player
-
-
-
-// var bDay;
-// var presents;
-
-// function submitForm() {
-//     bDay = document.getElementById(yourBday).value;
-//     alert("You are " + calculateAge() + " years old!");
-//     presents = document.getElementById("numOfPresents").value;
-//     alert(quickMaths());
-// }
-
-// var bDay;
-// function calculateAge() {
-//     var your_birthday = new Date(bDay);
-//     var today = new Date();
-//     return today.getFullYear-your_birthday.getFullYear();
-// }
-
-// function quickMaths() {
-//     var morePresents = presents+1;
-// return presents + " " +  morePresents;
-// }
