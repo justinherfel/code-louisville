@@ -209,5 +209,12 @@ the nav bar items flex to a row below JCPhoto text */
       margin: auto;
   }
 
+  /* feature that splits the single column to two columns in large width view */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0px 20px;
+    }
+
 }
 

@@ -40,7 +40,6 @@ window.onload = function() {
     fullScreenButton.addEventListener("click", function() {
         if (video.requestFullscreen) {
             video.requestFullscreen();
-            playButton.setAttribute("src", "video/fullscreen.png")
         } 
     });
 
