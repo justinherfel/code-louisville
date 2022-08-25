@@ -1,6 +1,6 @@
 # code-louisville
 
-This is a photo and video gallery of a cross-country trip I took, movinG from Los Angeles to Louisville in 2020. This is a single web page that highlights some of my favorite pictures and one video from the journey. I started with a mobile-first approach, and included two media queries.
+This is a photo and video gallery of a cross-country trip I took, moving from Los Angeles to Louisville in 2020. This is a single web page that highlights some of my favorite pictures and one video from the journey. I started with a mobile-first approach, and included two media queries.
 
 The first media query is designed for tablets, and the second media query is designed for desktop computers. Starting from a phone screen view, you'll see the menu items are stacked on top of each other below the J-PHOTO text, in a column. All the images, captions, and videos are also stacked in a single column. When expanded out to tablet view, the menu items at the top move into a row below the J-PHOTO text, and a small space on either side of the gallery appears. When expanded to desktop view, the menu items move to the upper right side of the page, and the J-PHOTO text moves to the left side of the page. The photo gallery moves to a two-column view. 
 
